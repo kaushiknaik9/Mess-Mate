@@ -41,6 +41,6 @@
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<username>/MessMate.git
+git clone https://github.com/kaushiknaik9/MessMate.git
 cd MessMate
 ```
