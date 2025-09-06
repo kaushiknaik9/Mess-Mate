@@ -11,46 +11,7 @@ interface MenuItem {
   status: "Available" | "Low" | "Out";
 }
 
-const mockMenuItems: MenuItem[] = [
-  {
-    id: 1,
-    name: "Idli Sambhar",
-    mealType: "Breakfast",
-    stock: 25,
-    status: "Available",
-  },
-  {
-    id: 2,
-    name: "Masala Dosa",
-    mealType: "Breakfast",
-    stock: 5,
-    status: "Low",
-  },
-  {
-    id: 3,
-    name: "Dal Rice",
-    mealType: "Lunch",
-    stock: 30,
-    status: "Available",
-  },
-  { id: 4, name: "Chicken Curry", mealType: "Lunch", stock: 0, status: "Out" },
-  {
-    id: 5,
-    name: "Chapati",
-    mealType: "Dinner",
-    stock: 20,
-    status: "Available",
-  },
-  {
-    id: 6,
-    name: "Mixed Vegetables",
-    mealType: "Dinner",
-    stock: 8,
-    status: "Low",
-  },
-  { id: 7, name: "Tea", mealType: "Snacks", stock: 15, status: "Available" },
-  { id: 8, name: "Samosa", mealType: "Snacks", stock: 2, status: "Low" },
-];
+const mockMenuItems: MenuItem[] = [];
 
 const getStatusColor = (status: MenuItem["status"]) => {
   switch (status) {

@@ -1,7 +1,11 @@
 import { LogOut } from "lucide-react";
 import MessMateLogo from "@/assets/logo.jpg";
+import LoginPage from "@/app/login/page";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const handleLogout = () => {
     // Logout logic would go here
     console.log("Logout clicked");
@@ -24,7 +28,10 @@ const Navbar = () => {
 
         {/* Logout button */}
         <button
-          onClick={handleLogout}
+          onClick={() => {
+            localStorage.removeItem("token");
+            router.push("/login");
+          }}
           className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 font-medium
                      hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200"
         >
