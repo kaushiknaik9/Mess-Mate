@@ -10,6 +10,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { AlertCircle, Utensils, Menu, LogOut, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function Dashboard() {
   return (
@@ -18,7 +19,7 @@ export default function Dashboard() {
       <aside className="w-64 bg-white shadow-md p-6 flex flex-col justify-between">
         <div>
           <div className="flex items-center gap-2 mb-8">
-            <img src="/logo.png" alt="MessMate" className="h-10 w-10" />
+            <Image src="/logo.png" alt="MessMate" width={40} height={40} />
             <h1 className="text-xl font-bold">MessMate</h1>
           </div>
           <nav className="space-y-4">
@@ -160,6 +161,10 @@ export default function Dashboard() {
               <p>Poor Ratings</p>
               <p>10%</p>
             </div>
+            <p>
+              Today's menu has been updated. Don't forget to check
+              students&apos; feedback!
+            </p>
           </CardContent>
         </Card>
       </main>

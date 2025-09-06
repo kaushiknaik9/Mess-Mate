@@ -47,7 +47,9 @@ const TodaysMenu = () => {
         <h2 className="text-2xl font-bold text-foreground">Today's Menu</h2>
         <Badge variant="outline">{mockMenuItems.length} Items</Badge>
       </div>
-
+      <p className="text-gray-700 mb-4">
+        Here&apos;s what&apos;s on the menu today. Enjoy your meal!
+      </p>
       {Object.entries(groupedItems).map(([mealType, items]) => (
         <div key={mealType} className="space-y-4">
           <h3 className="text-lg font-semibold text-primary">{mealType}</h3>

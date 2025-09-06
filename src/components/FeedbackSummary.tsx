@@ -13,9 +13,28 @@ import {
   Tooltip,
 } from "recharts";
 
+interface Feedback {
+  _id: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
+}
+
+interface RatingStat {
+  rating: number;
+  count: number;
+  percentage: number;
+}
+
+interface FeedbackData {
+  name: string;
+  value: number;
+  color: string;
+}
+
 const FeedbackSummary = () => {
-  const [feedbackData, setFeedbackData] = useState<any[]>([]);
-  const [ratingStats, setRatingStats] = useState<any[]>([]);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData[]>([]);
+  const [ratingStats, setRatingStats] = useState<RatingStat[]>([]);
 
   useEffect(() => {
     const fetchSummary = async () => {

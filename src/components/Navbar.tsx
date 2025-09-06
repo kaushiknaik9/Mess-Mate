@@ -1,25 +1,21 @@
 import { LogOut } from "lucide-react";
-import MessMateLogo from "@/assets/logo.jpg";
-import LoginPage from "@/app/login/page";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
-
-  const handleLogout = () => {
-    // Logout logic would go here
-    console.log("Logout clicked");
-  };
 
   return (
     <nav className="bg-white border-b border-gray-200 px-6 py-3 shadow-md sticky top-0 z-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img
-            src={MessMateLogo.src}
+          <Image
+            src="/logo.png"
             alt="MessMate Logo"
-            className="h-10 w-auto object-contain"
+            width={40}
+            height={40}
+            className="h-10 w-10"
           />
           <span className="text-xl font-bold text-indigo-600 tracking-tight">
             MessMate

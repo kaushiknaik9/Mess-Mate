@@ -37,10 +37,14 @@ export default function ProtectedPage({
         return;
       }
       setLoading(false);
-    } catch (err) {
-      alert("Invalid token. Please login again.");
-      localStorage.removeItem("token");
-      router.push("/login");
+    } catch (error) {
+      console.error("Error checking authentication:", error);
+      return {
+        redirect: {
+          destination: "/login",
+          permanent: false,
+        },
+      };
     }
   }, [router, allowedType]);
 

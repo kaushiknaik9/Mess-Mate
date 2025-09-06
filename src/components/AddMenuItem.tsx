@@ -2,7 +2,14 @@
 import { useState } from "react";
 
 interface AddMenuItemProps {
-  onAdded: (item: any) => void;
+  onAdded: (item: MenuItem) => void;
+}
+
+interface MenuItem {
+  name: string;
+  mealType: "Breakfast" | "Lunch" | "Snacks" | "Dinner";
+  description: string;
+  available: boolean;
 }
 
 export default function AddMenuItem({ onAdded }: AddMenuItemProps) {
@@ -21,7 +28,7 @@ export default function AddMenuItem({ onAdded }: AddMenuItemProps) {
       });
 
       if (res.ok) {
-        const newItem = await res.json(); // server returns created menu item
+        const newItem: MenuItem = await res.json(); // server returns created menu item
         onAdded(newItem); // 👈 update parent instantly
         setName("");
         setDescription("");

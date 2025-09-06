@@ -1,10 +1,11 @@
-import mongoose, { Schema, model, models } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 const adminSchema = new Schema({
-  username: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  name: { type: String },
+  name: { type: String, required: true },
+  role: { type: String, default: "admin" },
+  createdAt: { type: Date, default: Date.now },
 });
 
-const Admin = models.Admin || model("Admin", adminSchema);
-export default Admin;
+export default models.Admin || model("Admin", adminSchema);

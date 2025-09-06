@@ -4,14 +4,22 @@ import jwt from "jsonwebtoken";
 import User from "../models/user";
 import Admin from "../models/admin";
 
-const router = express.Router();
-
-router.post("/login", async (req: Request, res: Response) => {
-  const { id, password, type } = req.body as {
+interface AuthRequest extends Request {
+  body: {
     id: string;
     password: string;
     type: "student" | "admin";
   };
+  user?: {
+    id: string;
+    type: "student" | "admin";
+  };
+}
+
+const router = express.Router();
+
+router.post("/login", async (req: AuthRequest, res: Response) => {
+  const { id, password, type } = req.body;
 
   try {
     let user;
@@ -34,7 +42,7 @@ router.post("/login", async (req: Request, res: Response) => {
 
     const token = jwt.sign(
       { id: user._id, type },
-      process.env.JWT_SECRET || "secret",
+      process.env.JWT_SECRET as string,
       { expiresIn: "1d" }
     );
 
@@ -42,7 +50,7 @@ router.post("/login", async (req: Request, res: Response) => {
       token,
       user: {
         id: user._id,
-        name: (user as any).name || (user as any).username,
+        name: (user as User).name || (user as Admin).username,
         type,
       },
     });
