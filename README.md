@@ -20,19 +20,17 @@
 
 - **Daily Menu Display:** Shows all meals available for the day.
 - **Feedback System:** Simple buttons to rate each meal (Good / Average / Poor).
-- **Stock Alerts:** Notify students about items running out or unavailable.
+- **Available or unavailable:** students can check whether food is still available or no
 - **Admin Panel:** Mess authorities can update menu, availability, and monitor feedback.
-- **Optional AI/ML (Hackathon Extra):** Predict shortages based on past feedback and consumption trends.
+- **AI/ML (not done but I am planning to work on it):** Predict shortages based on past feedback and consumption trends.
 
 ---
 
 ## Tech Stack
 
-- **Frontend:** React + Vite
-- **Backend:** Firebase Firestore / Next.js API routes
-- **Authentication:** Firebase Auth (optional: Google sign-in)
-- **Maps & Alerts:** Optional push notifications for shortage alerts
-- **AI/ML (Optional):** Python Logistic Regression / Decision Tree for predicting shortages
+- **Frontend:** React + Vite and Next.js
+- **Backend:** Node.js Next.js API routes
+- **AI/ML (not done but I am planning to work on it):** Python Logistic Regression / Decision Tree for predicting shortages
 
 ---
 
@@ -41,6 +39,6 @@
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/kaushiknaik9/MessMate.git
-cd MessMate
+git clone https://github.com/kaushiknaik9/Mess-Mate.git
+cd Mess-Mate
 ```
