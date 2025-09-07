@@ -8,10 +8,9 @@ const Navbar = () => {
   return (
     <nav className="bg-white border-b border-gray-200 px-6 py-3 shadow-md sticky top-0 z-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Logo */}
         <div className="flex items-center space-x-3">
           <Image
-            src="/logo.png"
+            src="/logo.jpg"
             alt="MessMate Logo"
             width={40}
             height={40}
