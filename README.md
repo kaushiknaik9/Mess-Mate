@@ -33,6 +33,14 @@
 - **AI/ML (not done but I am planning to work on it):** Python Logistic Regression / Decision Tree for predicting shortages
 
 ---
+## Note
+
+-**Student ID:** Anything between ABC001 to ABC100
+-**Password:** Example if ID is ABC023 so password will be 023023
+-**Admin ID**: admin123
+-**Admin Password**: admin123
+
+---
 
 ## Installation
 
